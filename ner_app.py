@@ -3,9 +3,6 @@ import spacy
 import streamlit as st
 import html
 
-nlp = spacy.load("en_core_web_trf")
-
-
 # Mapping from spaCy labels to CoNLL labels
 spacy2conll = {
     "PERSON": "PER",
