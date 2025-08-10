@@ -1,1 +1,5 @@
+streamlit
+spacy
+torch
+transformers
 
