@@ -2,6 +2,7 @@
 import spacy
 import streamlit as st
 import html
+import subprocess
 
 def download_spacy_model():
     try:
