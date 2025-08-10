@@ -3,6 +3,15 @@ import spacy
 import streamlit as st
 import html
 
+@st.cache_resource
+def load_model():
+    try:
+        return spacy.load("en_core_web_trf")
+    except OSError:
+        # If model not found, download it on the fly
+        subprocess.run([sys.executable, "-m", "spacy", "download", "en_core_web_trf"], check=True)
+        return spacy.load("en_core_web_trf")
+
 # Mapping from spaCy labels to CoNLL labels
 spacy2conll = {
     "PERSON": "PER",
@@ -48,16 +57,6 @@ colors = {
     "NORP": "lightseagreen"
 }
 
-# Load SpaCy model once with caching and error handling
-@st.cache_resource
-def load_model():
-    try:
-        return spacy.load("en_core_web_trf")
-    except Exception as e:
-        st.error(f"Failed to load spaCy model: {e}")
-        return None
-
-nlp = load_model()
 
 # Highlight function for HTML with escaping
 def highlight_entities_html(doc):
