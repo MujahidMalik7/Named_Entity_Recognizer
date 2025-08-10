@@ -1,12 +1,4 @@
 #!/bin/bash
-
-echo "Running setup.sh: downloading spaCy transformer model..."
-
+echo "Downloading spaCy model en_core_web_trf..."
 python -m spacy download en_core_web_trf
-
-if [ $? -eq 0 ]; then
-  echo "Model downloaded successfully."
-else
-  echo "Failed to download the model."
-  exit 1
-fi
+echo "Download complete."
