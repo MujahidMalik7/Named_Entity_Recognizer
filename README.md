@@ -6,6 +6,7 @@ It was developed in two main stages:
 
 - Model Evaluation & Comparison on a dataset.  
 - Deployment of the best-performing model using Streamlit for an interactive NER highlighter app.
+- Command-line interface to run NER analyses directly from the terminal, allowing batch or interactive text processing without UI.
 
 ---
 
@@ -36,43 +37,6 @@ Based on these results, **`en_core_web_trf`** was selected for deployment.
 
 ---
 
-## 💻 Stage 2: Streamlit Deployment  
-
-After selecting **`en_core_web_trf`**, I developed an **interactive NER highlighter** using Streamlit.  
-Key features of the web app:
-
-- **Text Input Area**: Users can enter any text to analyze.  
-- **Color-Coded Entity Highlighting**: Each entity type is displayed with a distinct background color.  
-- **Sidebar Entity Legend**:  
-  - Shows each spaCy entity label.  
-  - Maps it to its CoNLL equivalent.  
-  - Provides a **human-friendly description** of the entity type (e.g., `NORP` → "Nationalities, religious or political groups").  
-  - Displays the corresponding highlight color.  
-- **Entity Categories Supported**: PERSON, ORG, GPE, LOC, FAC, MISC, PRODUCT, EVENT, DATE, MONEY.
-
----
-
-## 📊 Example Output  
-
-**Sidebar Legend**  
-
-| Entity Label | CoNLL Tag | Description                                  | Highlight Color |
-|--------------|-----------|----------------------------------------------|-----------------|
-| PERSON       | PER       | People, including fictional characters       | lightgreen      |
-| ORG          | ORG       | Organizations, companies, agencies           | lightblue       |
-| GPE          | GPE       | Countries, cities, states                     | orange          |
-| LOC          | LOC       | Non-GPE locations, mountain ranges, bodies of water | yellow          |
-| FAC          | FAC       | Buildings, airports, highways, bridges       | pink            |
-| MISC         | MISC      | Miscellaneous entities                        | purple          |
-| PRODUCT      | PROD      | Objects, vehicles, foods                      | teal            |
-| EVENT        | EVNT      | Named events like wars, sports events         | brown           |
-| DATE         | DATE      | Absolute or relative dates or periods         | lightgray       |
-| MONEY        | MONEY     | Monetary values, including unit               | gold            |
-
-**Highlighted Text Example:**  
-Barack Obama (PERSON) was elected President of the United States (GPE) in 2008 (DATE).
-
----
 
 ## 🛠 Tools & Libraries Used  
 - Python  
@@ -80,14 +44,13 @@ Barack Obama (PERSON) was elected President of the United States (GPE) in 2008 (
 - Transformers (`dslim/bert-base-NER`)  
 - seqeval (evaluation metrics)  
 - matplotlib (visualizations)  
-- Streamlit (web deployment)  
 
 ---
 
 ## 📌 Summary  
 - Compared three NER models (`en_core_web_sm`, `en_core_web_trf`, `dslim/bert-base-NER`) on real and synthetic datasets.  
 - Selected `en_core_web_trf` as the final model due to its accuracy and balanced performance.  
-- Built a Streamlit web app that allows interactive entity recognition with color-coded highlights and an easy-to-understand legend.
+- Developed a command-line interface (CLI) to allow running the NER program directly from the terminal for flexible usage without a UI.
 
 ---
 
