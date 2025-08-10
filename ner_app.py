@@ -2,16 +2,6 @@
 import spacy
 import streamlit as st
 import html
-import subprocess
-
-def download_spacy_model():
-    try:
-        spacy.load("en_core_web_trf")
-    except OSError:
-        result = subprocess.run(["python", "-m", "spacy", "download", "en_core_web_trf"], check=True)
-        # check=True raises an error if download fails
-
-download_spacy_model()
 
 nlp = spacy.load("en_core_web_trf")
 
