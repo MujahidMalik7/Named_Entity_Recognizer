@@ -3,5 +3,5 @@ spacy
 torch
 transformers
 spacy==3.8.7
-https://github.com/explosion/spacy-models/releases/download/en_core_web_trf-3.8.7/en_core_web_trf-3.8.7.tar.gz
+en-core-web-trf @ https://github.com/explosion/spacy-models/releases/download/en_core_web_trf-3.8.7/en_core_web_trf-3.8.7.tar.gz
 
