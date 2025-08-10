@@ -2,4 +2,5 @@ streamlit
 spacy
 torch
 transformers
+https://github.com/explosion/spacy-models/releases/download/en_core_web_trf-3.6.0/en_core_web_trf-3.6.0.tar.gz
 
