@@ -2,6 +2,8 @@
 import spacy
 import streamlit as st
 import html
+import subprocess
+import sys
 
 @st.cache_resource
 def load_model():
