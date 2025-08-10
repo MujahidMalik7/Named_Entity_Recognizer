@@ -3,6 +3,16 @@ import spacy
 import streamlit as st
 import html
 
+def download_spacy_model():
+    try:
+        spacy.load("en_core_web_trf")
+    except OSError:
+        subprocess.run(["python", "-m", "spacy", "download", "en_core_web_trf"])
+
+download_spacy_model()
+
+nlp = spacy.load("en_core_web_trf")
+
 # Mapping from spaCy labels to CoNLL labels
 spacy2conll = {
     "PERSON": "PER",
