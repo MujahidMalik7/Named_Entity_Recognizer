@@ -3,7 +3,13 @@ import spacy
 import streamlit as st
 import html
 
-nlp = spacy.load("en_core_web_trf")
+try:
+    nlp = spacy.load("en_core_web_trf")
+except OSError:
+    # fallback for debugging, try download once (optional)
+    import subprocess, sys
+    subprocess.run([sys.executable, "-m", "spacy", "download", "en_core_web_trf"])
+    nlp = spacy.load("en_core_web_trf")
 
 
 # Mapping from spaCy labels to CoNLL labels
