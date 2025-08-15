@@ -26,7 +26,7 @@ entity_descriptions = {
     "LOC": "Locations (non-political, e.g., mountains, rivers)",
     "FAC": "Facilities (buildings, airports, highways)",
     "MISC": "Miscellaneous entities",
-    "PRODUCT": "Products (objects, vehicles, foods, etc.)",
+    "PRODUCT": "Products (objects, vehicles, etc.)",
     "EVENT": "Named events (wars, sports events, etc.)",
     "DATE": "Specific dates or periods",
     "MONEY": "Monetary values",
