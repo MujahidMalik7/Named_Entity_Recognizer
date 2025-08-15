@@ -13,7 +13,8 @@ spacy2conll = {
     "PRODUCT": "PROD",
     "EVENT": "EVENT",
     "DATE": "DATE",
-    "MONEY": "MONEY"
+    "MONEY": "MONEY",
+    "CARDINAL": "CARDINAL"
 }
 
 # Human-friendly descriptions for spaCy entity types
@@ -28,7 +29,8 @@ entity_descriptions = {
     "PRODUCT": "Products (objects, vehicles, foods, etc.)",
     "EVENT": "Named events (wars, sports events, etc.)",
     "DATE": "Specific dates or periods",
-    "MONEY": "Monetary values"
+    "MONEY": "Monetary values",
+    "CARDINAL": "Numerals that do not fall under another type"
 }
 
 # Colors for entity types
@@ -43,7 +45,8 @@ colors = {
     "MISC": "lightgrey",
     "EVENT": "khaki",
     "FAC": "wheat",
-    "NORP": "lightseagreen"
+    "NORP": "lightseagreen",
+    "CARDINAL": "plum"
 }
 
 # Load SpaCy model once
