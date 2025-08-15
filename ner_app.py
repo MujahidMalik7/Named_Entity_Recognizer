@@ -73,12 +73,11 @@ for label, conll in spacy2conll.items():
     st.sidebar.markdown(
         f'<div style="margin-bottom:8px;">'
         f'<span style="background-color:{color}; padding:4px; border-radius:4px; color:black;">{label}</span> '
-        f'**→ {conll}**<br>'
+        f'&rarr; {conll}<br>'
         f'<small>{description}</small>'
         f'</div>',
         unsafe_allow_html=True
     )
-
 # Main UI
 st.title("Named Entity Recognition (NER) Highlighter")
 st.write("Enter text and see detected entities highlighted with colors.")
